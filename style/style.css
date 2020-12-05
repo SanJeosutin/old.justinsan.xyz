@@ -1,0 +1,46 @@
+/***************************
+ *? AUTHOR      : Justin San
+ *? TITLE       : style.css
+ *? CREATED ON  : 05-12-2020
+***************************/
+
+@font-face{
+  font-family: gaegu-Bold; src: url(../fonts/Gaegu/Gaegu-Bold.ttf);}
+@font-face{
+  font-family: gaegu-Light; src: url(../fonts/Gaegu/Gaegu-Light.ttf);}
+@font-face{
+  font-family: gaegu-Regular; src: url(../fonts/Gaegu/Gaegu-Regular.ttf);}
+
+::-webkit-scrollbar { display: none; }
+
+html, body{
+    font: 1.2em gaegu-Regular; 
+    height: 100%;
+    background-color: yellowgreen;
+
+    scroll-behavior: smooth;
+}
+
+.title{
+    font: 12vw gaegu-Bold;
+    user-select: none;
+}
+
+.bg-yellowgreen{
+    background-color: yellowgreen;
+}
+
+#partcileBackground {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+#topLayer {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+}
