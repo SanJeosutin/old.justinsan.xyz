@@ -47,8 +47,8 @@ include('./settings/functions.php');
             }
 
             checkPath($dir);
-            uploadFile($proj_type, "projectImage", "images", $errMsg);
-            uploadFile($proj_type, "projectPath", "zip", $errMsg);
+            $proj_imgPath = uploadFile($proj_type, "projectImage", "images", $errMsg);
+            $proj_path = uploadFile($proj_type, "projectPath", "zip", $errMsg);
 
             if ($errMsg == array()) {
                 $state = "success";
@@ -60,7 +60,7 @@ include('./settings/functions.php');
                 fwrite($file, $proj_data);
                 fclose($file);
 
-                array_push($errMsg, "Success", "Request has been received! Thank you");
+                array_push($errMsg, "Success", "Your project has been uploaded. Thank you");
             } else {
                 $state = "error";
                 array_push($errMsg, "Error", "File could not be uploaded. Please try again later");

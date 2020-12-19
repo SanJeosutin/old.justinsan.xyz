@@ -127,6 +127,25 @@
 
         if($errMsg  == array()){
             move_uploaded_file($tempFile, $targetFile);
+            if($fileType == "zip"){
+                return unzipFile($targetFile, $fileName);
+            }
+            else if($fileType != "zip"){
+                return "$targetFile";
+            }
+        }
+    }
+
+    function unzipFile($fileLoc, $fileName){
+        $zip = new ZipArchive;
+        if($zip->open($fileLoc) === TRUE){
+            $fileDir = preg_replace("/(\.\w*)/", "",$fileName);
+            $fileDir = dirname($fileLoc)."/".$fileDir;
+            mkdir($fileDir);
+            $zip->extractTo($fileDir);
+            $zip->close();
+
+            return "$fileDir";
         }
     }
     
