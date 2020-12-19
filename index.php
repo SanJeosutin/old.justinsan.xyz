@@ -1,12 +1,14 @@
-<?
+<?php
 /*
  * File name:   index.php
  * Author   :   Justin San
- * -=-=-=-=-=-=-=-=-=-=-=-=
+ * Desc		:	Home / landing page
+ ? -=-=-=-=-=-=-=-=-=-=-=-=
  * Created  :   19/12/2020
  * Updated  :   19/12/2020
 */
 ?>
+<?php include('./incs/header.inc'); ?>
 	<div id="partcileBackground">
 		<div id="topLayer">
 			<!--MAIN CONTENT-->
@@ -30,6 +32,5 @@
 			</div>
 		</div>
 	</div>
-<?php include('./incs/header.inc'); ?>
 
 <?php include('./incs/footer.inc'); ?>
