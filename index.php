@@ -32,5 +32,4 @@
 			</div>
 		</div>
 	</div>
-
 <?php include('./incs/footer.inc'); ?>

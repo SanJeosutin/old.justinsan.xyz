@@ -68,7 +68,6 @@ include('./settings/functions.php');
 
             echo displayMessage($errMsg, $state);
         }
-
         ?>
     </div>
 </div>

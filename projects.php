@@ -27,8 +27,7 @@ $projectPath = "./files/projects";
         </p>
         <?php //SCRIPT GOES HERE
             checkPath("projectCard.inc");
-            createCard("./data/ProjectCards/projectCard.inc" ,$projectPath, "$projectPath/.Images/random-image.jpg", "$projectPath/WEB RCON", "https://github.com/SanJeosutin/MCRCON", "Just a Minecraft RCON Web UI. It's still in development.");
-            include('./data/ProjectCards/projectCard.inc');
+            displayProject("./data/uploadFiles.txt");
         //SCRIPT ENDS HERE?>
     </div>
 </div>
