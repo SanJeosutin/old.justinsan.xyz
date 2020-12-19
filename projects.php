@@ -25,7 +25,7 @@ include('./settings/functions.php');
         </p>
         <?php //SCRIPT GOES HERE
             checkPath("uploadFiles.txt");
-            displayProject("./data/uploadFiles.txt");
+            displayProject("./data/uploadFiles.txt", basename($_SERVER['PHP_SELF']));
         //SCRIPT ENDS HERE?>
     </div>
 </div>

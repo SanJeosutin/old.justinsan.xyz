@@ -178,8 +178,9 @@ function writeFile($loc, $data)
     fclose($file);
 };
 
-function displayProject($fileDir)
+function displayProject($fileDir, $currLoc)
 {
+    $currLoc = str_replace('.php', '', $currLoc);
     $handle = fopen($fileDir, "r");
 
     $rowTag = "<!--START-->\n<div class=\"row\">";
@@ -191,7 +192,7 @@ function displayProject($fileDir)
         
         while (!feof($handle)) {
             list($type, $name, $imgPath, $githubURL, $projectDir, $desc) = array_pad(explode("\t", fgets($handle)), 6, null);
-            if ($type != null) {
+            if ($type != null && $currLoc == $type) {
                 if($count != 0 && $count % 3 == 0){
                     $str .= $endTag;
                     $str .= $rowTag;
@@ -212,6 +213,27 @@ function displayProject($fileDir)
 
                     $str .= $cardTag;
                     $count++;
+                }else if($type != null && $currLoc == $type){
+                    if($count != 0 && $count % 3 == 0){
+                        $str .= $endTag;
+                        $str .= $rowTag;
+                    }
+                    
+                    $cardTag = "
+                        <div class=\"col-sm\">
+                            <div class=\"card\" style=\"width: 18rem;\">
+                                <img class=\"card-img-top\" src=\"" . $imgPath . "\" alt=\"$name\">
+                                <div class=\"card-body\">
+                                    <h5 class=\"card-title\">" . $name . "</h5>
+                                    <p class=\"card-text\">" . $desc . "</p>
+                                    <a href=\"" . $projectDir . "\" class=\"btn btn-primary\">Live Demo</a>
+                                    <a href=\"" . $githubURL . "\" class=\"btn btn-primary\">Source Code</a>
+                                </div>
+                            </div>
+                        </div>";
+    
+                        $str .= $cardTag;
+                        $count++;
                 }
             }
         echo $str;
