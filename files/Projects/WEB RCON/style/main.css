@@ -1,0 +1,66 @@
+:root{
+    --border: #a1a1a1;
+    --background: #1a1a2e;
+    --console: #16213e;
+
+    --mainFont: #ffffff;
+    --secondaryFont: #a1a1a1;
+
+    --error: #e94560;
+    --success: #60e945;
+
+    --button: #45dee9;
+}
+.title{
+    font-size: 2em;
+}
+
+.verNum{
+    font-size: .4em;
+}
+
+body{
+    background-color: var(--background);
+    color: var(--mainFont);
+}
+.tabTitle{
+    padding: 5px 20px;
+    margin: 0;
+
+    background-color: var(--console);
+
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    text-align: right;
+    font-weight: bolder;
+    font-size: 1.25em;
+}
+
+.content{
+    margin: 25px 4%;
+    height: 98%;
+}
+
+.consoleCard{
+    background-color: var(--console);
+    padding: 5px 20px;
+    
+    border: 1px solid var(--border);
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+input[type=text]{
+    width: 94%;
+}
+
+input[type=submit]{
+    color: var(--background);
+    background-color: var(--button);
+    font-weight: bold;
+}

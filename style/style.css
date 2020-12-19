@@ -14,7 +14,6 @@
 ::-webkit-scrollbar { display: none; }
 
 html, body{
-    font: 1.2em gaegu-Regular; 
     height: 100%;
     background-color: yellowgreen;
 
@@ -26,8 +25,16 @@ html, body{
     user-select: none;
 }
 
+.index-font{
+  font: 1.75em gaegu-Regular; 
+}
+
 .bg-yellowgreen{
     background-color: yellowgreen;
+}
+
+.bg-greenyellow{
+  background-color: greenyellow;
 }
 
 #partcileBackground {
@@ -35,7 +42,7 @@ html, body{
     height: 100%;
     overflow: hidden;
 }
-  
+
 #topLayer {
     position: absolute;
     left: 0;
