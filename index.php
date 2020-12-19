@@ -21,10 +21,10 @@
 								<a class="nav-link bg-yellowgreen" href="projects.php">Projects</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link bg-yellowgreen" href="#About">About</a>
+								<a class="nav-link bg-yellowgreen" href="about.php">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link bg-yellowgreen" href="#Designs">Designs</a>
+								<a class="nav-link bg-yellowgreen" href="designs.php">Designs</a>
 							</li>
 						</ul>
 					</div>

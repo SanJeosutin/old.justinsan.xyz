@@ -212,7 +212,6 @@ function displayProject($fileDir)
 
                     $str .= $cardTag;
                     $count++;
-
                 }
             }
         echo $str;

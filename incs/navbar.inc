@@ -1,14 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-light bg-greenyellow" >
 		<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navBarAlt">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-item nav-link active" href="projects.php">Projects</span></a>
+				
+				<?php 
+				$currLoc = basename($_SERVER['PHP_SELF']);
+				?>
+				<li <?php echo ($currLoc == "projects.php")? "class = 'nav-item active'": "class = 'nav-item'"?>>
+					<a <?php echo ($currLoc == "projects.php")? "class = 'nav-item nav-link active'": "class = 'nav-item nav-link'"?> href="projects.php">Projects</span></a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-item nav-link" href="about.php">About</a>
+				<li <?php echo ($currLoc == "about.php")? "class = 'nav-item active'": "class = 'nav-item'"?>>
+					<a <?php echo ($currLoc == "about.php")? "class = 'nav-item nav-link active'": "class = 'nav-item nav-link'"?> href="about.php">About</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-item nav-link" href="designs.php">Designs</a>
+				<li <?php echo ($currLoc == "designs.php")? "class = 'nav-item active'": "class = 'nav-item'"?>>
+					<a <?php echo ($currLoc == "designs.php")? "class = 'nav-item nav-link active'": "class = 'nav-item nav-link'"?> href="designs.php">Designs</a>
 				</li>
 			</ul>
 		</div>
