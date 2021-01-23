@@ -4,29 +4,24 @@
  *? CREATED ON  : 05-12-2020
 ***************************/
 
-@font-face{
-  font-family: gaegu-Bold; src: url(../fonts/Gaegu/Gaegu-Bold.ttf);}
-@font-face{
-  font-family: gaegu-Light; src: url(../fonts/Gaegu/Gaegu-Light.ttf);}
-@font-face{
-  font-family: gaegu-Regular; src: url(../fonts/Gaegu/Gaegu-Regular.ttf);}
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 
 ::-webkit-scrollbar { display: none; }
 
 html, body{
     height: 100%;
-    background-color: yellowgreen;
+    background-color: greenyellow;
 
     scroll-behavior: smooth;
 }
 
 .title{
-    font: 12vw gaegu-Bold;
+    font: 12vw 'gaegu', cursive;
     user-select: none;
 }
 
 .index-font{
-  font: 1.75em gaegu-Regular; 
+  font: 1.75em 'gaegu', cursive; 
 }
 
 .bg-yellowgreen{
